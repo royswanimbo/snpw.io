@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Konfirmasi</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- my css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Awal navigasi Bar -->
+  <nav class="navbar navbar-expand-lg bg-light shadow  fixed-top">
+    <div class="container">
+      <img src="images/logo.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+      <a class="navbar-brand fw-bold fs-4 p-2" href="#">SMP NEGERI 1 PIRIME</a>
+
+      <!-- Tombol Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto p-2">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="program.html">Program & Kurikulum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="berita.html">Berita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galeri.html">Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="daftar.html">Daftar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir navigasi Bar -->
+
+  <section class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+    <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
+      <h2 class="text-center fw-semibold">Konfirmasi <span class="text-primary">Pendaftaran</span></h2>
+      <p class="text-center text-muted">Silakan periksa kembali data yang telah Anda isi sebelum mengirim pendaftaran.
+      </p>
+
+      <table class="table table-bordered mt-3">
+        <tr>
+          <td><strong>Nama</strong></td>
+          <td id="konfNama"></td>
+        </tr>
+        <tr>
+          <td><strong>NISN</strong></td>
+          <td id="konfNisn"></td>
+        </tr>
+        <tr>
+          <td><strong>Tempat/Tanggal Lahir</strong></td>
+          <td id="konfTtl"></td>
+        </tr>
+        <tr>
+          <td><strong>Kelas</strong></td>
+          <td id="konfKelas"></td>
+        </tr>
+        <tr>
+          <td><strong>Nama Ayah</strong></td>
+          <td id="konfAyah"></td>
+        </tr>
+        <tr>
+          <td><strong>Nama Ibu</strong></td>
+          <td id="konfIbu"></td>
+        </tr>
+      </table>
+
+      <div class="d-flex justify-content-between mt-4">
+        <button onclick="submitForm()" class="btn btn-info">Kirim</button>
+        <a href="status.html" class="btn btn-primary">Cek Status</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function submitForm() {
+      alert("Pendaftaran berhasil dikirim!");
+      localStorage.removeItem("pendaftaran"); // Hapus data setelah dikirim
+    }
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="bg-primary mt-5 py-3">
+    <div>
+      <p class="footer text-center text-light">Copyright &copy 2025 megelola Website Kanius wanimbo S.Pd</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (Pastikan sudah ada) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

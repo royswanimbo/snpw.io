@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- my css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Awal navigasi Bar -->
+  <nav class="navbar navbar-expand-lg bg-light shadow  fixed-top">
+    <div class="container">
+      <img src="images/logo.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+      <a class="navbar-brand fw-bold fs-4 p-2" href="#">SMP NEGERI 1 PIRIME</a>
+
+      <!-- Tombol Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto p-2">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="program.html">Program & Kurikulum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="berita.html">Berita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galeri.html">Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="daftar.html">Daftar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir navigasi Bar -->
+
+  <section class="container p-5 mt-5">
+    <div class="card shadow-lg p-4 mx-auto" style="max-width: 800px;">
+      <h1 class="fw-semibold text-center p-4">
+        <span class="text-primary">Formulir </span>Pendaftaran
+      </h1>
+      <form action="konfirmasi.html" method="post" enctype="multipart/form-data">
+        <div class="row">
+          <!-- Kolom Kiri (Data Pribadi) -->
+          <div class="col-md-6">
+            <h4 class="mb-3 fw-semibold">Data Pribadi</h4>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Nama Lengkap:</label>
+              <input type="text" name="nama" class="form-control shadow-sm" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">NISN:</label>
+              <input type="text" name="nisn" class="form-control shadow-sm" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Tempat, Tanggal Lahir:</label>
+              <input type="text" name="ttl" class="form-control shadow-sm" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Kelas:</label>
+              <select name="kelas" class="form-select shadow-sm" required>
+                <option value="" selected disabled>Pilih Kelas</option>
+                <option value="1">Kelas 1 SD</option>
+                <option value="2">Kelas 2 SD</option>
+                <option value="3">Kelas 3 SD</option>
+                <option value="4">Kelas 4 SD</option>
+                <option value="5">Kelas 5 SD</option>
+                <option value="6">Kelas 6 SD</option>
+              </select>
+            </div>
+
+            <h4 class="mb-3 fw-semibold">Data Orang Tua/Wali</h4>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Nama Ayah:</label>
+              <input type="text" name="ayah" class="form-control shadow-sm" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Nama Ibu:</label>
+              <input type="text" name="ibu" class="form-control shadow-sm" required>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan (Unggah Dokumen) -->
+          <div class="col-md-6">
+            <h4 class="fw-semibold">Unggah Dokumen</h4>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Kartu Keluarga (KK):</label>
+              <input type="file" name="kk" class="form-control shadow-sm" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Akta Kelahiran:</label>
+              <input type="file" name="akta" class="form-control shadow-sm" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Rapor:</label>
+              <input type="file" name="rapor" class="form-control shadow-sm" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol Submit -->
+        <div class="text-center mt-4">
+          <button type="button" onclick="simpanData()" class="btn btn-primary px-4 py-2 shadow">
+            <a href="konfirmasi.html" style="text-decoration: none; color: white; font-weight: bold;">Daftar</a>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-primary mt-5 py-3">
+    <div>
+      <p class="footer text-center text-light">Copyright &copy 2025 megelola Website Kanius wanimbo S.Pd</p>
+    </div>
+  </footer>
+
+
+
+  <!-- Bootstrap JS (Pastikan sudah ada) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

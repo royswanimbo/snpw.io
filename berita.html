@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMP 1 PIRIME/berita</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- my css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Awal navigasi Bar -->
+  <nav class="navbar navbar-expand-lg bg-light shadow  fixed-top">
+    <div class="container">
+      <img src="images/logo.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+      <a class="navbar-brand fw-bold fs-4 p-2" href="#">SMP NEGERI 1 PIRIME</a>
+
+      <!-- Tombol Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto p-2">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="program.html">Program & Kurikulum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="berita.html">Berita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galeri.html">Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="daftar.html">Daftar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir navigasi Bar -->
+
+  <!-- Tambahkan Modal Bootstrap -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="modal-dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Informasi Lengkap</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalContent">Konten akan diperbarui sesuai pilihan.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="berita" class="bg-light py-5">
+    <div class="container">
+      <div class="text-primary mb-3">
+        <h2 class="display-4 fw-semibold p-5">Berita <span class="text-black">Terbaru</span></h2>
+      </div>
+      <div class="container py-5 ">
+        <div class="row">
+          <!-- Konten Utama -->
+          <div class="col-lg-8 mb-4">
+            <h2 class="fw-semibold">Berita Utama</h2>
+            <p>Informasi Seputar SMP 1 Pirime</p>
+            <hr>
+
+            <!-- Card 1 -->
+            <div class="col-mb-6 col-lg-4">
+              <div class="card shadow-sm h-100">
+                <img src="images/7pirime.jpg" class="card-img-top" alt="Mata Pelajaran">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Libur Sekolah</h5>
+                  <p class="card-text">Dalam Rangka HUT SMP 1 PIRIME, maka Sekolah Diliburkan pada 28 Februari s.d
+                    06 maret.</p>
+                  <button class="btn btn-outline-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                    onclick="updateModal('Libur Sekolah', 'Libur Sekolah dalam rangka HUT Sekolah  SPM 1 PIRIME, maka Sekolah Diliburkan pada 28 Februari sampai dengan 06 maret 2025 dan akan kembali aktif pada tanggal 07 maret 2025.')">Baca
+                    Selengkapnya</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar Berita & Pengumuman -->
+          <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+              <div class="card-header bg-primary text-white text-center">
+                <h5 class="mb-0">Berita & Pengumuman</h5>
+              </div>
+              <div class="card-body">
+
+                <!-- Berita 1 -->
+                <div class="mb-3">
+                  <h6 class="fw-bold">Upacara Hari Kemerdekaan</h6>
+                  <p class="small text-muted">SMP 1 Pirime merayakan Hari Kemerdekaan dengan berbagai lomba.</p>
+                  <button class="btn btn-outline-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                    onclick="updateModal('Upacara Hari Kemerdekaan', 'Dalam rangka memperingati Hari Kemerdekaan Indonesia, sekolah mengadakan Lomba Upacara Kemerdekaan untuk meningkatkan rasa nasionalisme, disiplin, dan kebersamaan siswa. Lomba ini menilai kekompakan, kerapihan, kedisiplinan, dan ketepatan dalam menjalankan tata upacara bendera sesuai aturan yang berlaku.')">Baca
+                    Selengkapnya</button>
+                </div>
+                <hr>
+
+                <!-- Berita 2 -->
+                <div class="mb-3">
+                  <h6 class="fw-bold">SMP 1 PIRIME</h6>
+                  <p class="small text-muted">Sekolah mendapatkan penghargaan atas komitmen menjaga lingkungan.</p>
+                  <button class="btn btn-outline-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                    onclick="updateModal('Sekolah Mendapat Penghargaan', 'Sekolah kami dengan bangga meraih penghargaan prestisius atas dedikasi dalam menciptakan lingkungan pendidikan yang berkualitas. Penghargaan ini diberikan sebagai bentuk apresiasi terhadap komitmen sekolah dalam meningkatkan prestasi akademik, non-akademik, serta pengembangan karakter siswa.')">Baca
+                    Selengkapnya</button>
+                </div>
+                <hr>
+
+                <!-- Pengumuman 1 -->
+                <div class="mb-3">
+                  <h6 class="fw-bold">Pendaftaran Siswa Baru</h6>
+                  <p class="small text-muted">Pendaftaran siswa baru telah dibuka! Daftarkan segera Yuu...</p>
+                  <button class="btn btn-outline-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                    onclick="updateModal('Pendaftaran siswa Baru', 'Sekolah kami membuka Pendaftaran Siswa Baru untuk tahun ajaran terbaru! Ini adalah kesempatan bagi calon siswa untuk bergabung dalam lingkungan pendidikan yang berkualitas, inovatif, dan berorientasi pada pengembangan akademik serta karakter.')">Lihat
+                    Detail</button>
+                </div>
+                <hr>
+
+                <!-- Pengumuman 2 -->
+                <div class="mb-3">
+                  <h6 class="fw-bold">Libur Akhir Semester</h6>
+                  <p class="small text-muted">Libur dimulai dari 20 Juni hingga 5 Agustus 2025.</p>
+                  <button class="btn btn-outline-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                    onclick="updateModal('Libur Akhir Semester', 'Sekolah mengumumkan Libur Akhir Semester sebagai waktu istirahat bagi siswa setelah menyelesaikan berbagai kegiatan akademik dan non-akademik. Liburan ini menjadi kesempatan untuk beristirahat, berkumpul bersama keluarga, serta mengembangkan hobi dan keterampilan di luar sekolah.')">Lihat
+                    Detal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="bg-primary mt-5 py-3">
+    <div>
+      <p class="footer text-center text-light">Copyright &copy 2025 megelola Website Kanius wanimbo S.Pd</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <!-- Bootstrap JS (Pastikan sudah ada) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
